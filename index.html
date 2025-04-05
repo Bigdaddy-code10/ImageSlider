@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Factory</h1>
+
+    <img id="slider" src="./image/slide1.jpg" alt="Image Slider" />
+
+    <script>
+      const images = [
+        "image/slide2.jpg",
+        "image/slide3.jpg",
+        "image/slide4.jpg",
+        "image/slide6.jpg",
+        "image/slide7.jpg",
+      ];
+
+      let index = 0;
+      const slider = document.querySelector("#slider");
+
+      // Change image every 3 seconds
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        slider.src = images[index];
+      }, 3000); // 3000 ms = 3 seconds
+    </script>
+  </body>
+</html>
